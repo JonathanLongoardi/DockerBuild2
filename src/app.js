@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 //const PORT = process.env.PORT || 3000;
 
-var sqlze = require('sequelize');
+//var sqlze = require('sequelize');
 var mysql =  require('mysql');
 var db = new sqlze('id18136124_docker3', 'username', '\Tq27Yu4A]tXy(@5',{
 dialect: 'mysql',
