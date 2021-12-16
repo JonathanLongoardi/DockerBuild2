@@ -8,5 +8,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(process.env.PORT, '0.0.0.0', () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  //console.log(`Example app listening at http://localhost:${port}`)
 })
