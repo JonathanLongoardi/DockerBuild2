@@ -1,3 +1,5 @@
+let jsonSql = require('json-sql');
+const promise = require('bluebird');
 
 const express = require('express')
 const app = express()
@@ -10,6 +12,13 @@ module.exports = {
   PASSWORD: "%R^mdLzvl!WRH@Wf%Hwf",
   DB: "id18136124_docker3"
 };
+
+
+createSelectQuery(filter, sort) {let sql = jsonSql.build({ dialect: 'mssql', type: 'select', table: 'Tabla1', 
+fields: ['num', 'num2'], 
+condition: filter, sort: sort
+}); 
+return sql;}
 
 
 app.get('/', (req, res) => {
