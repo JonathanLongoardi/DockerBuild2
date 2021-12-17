@@ -8,7 +8,7 @@ const promise = require('bluebird');
 const SqlConnection = require("tedious").Connection;
 const Request = require("tedious").Request;
 
-executeQuery(query) {
+executeQuery(query); {
         let resultEntity = {
             result: {},
             error: null
