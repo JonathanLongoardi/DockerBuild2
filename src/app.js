@@ -1,9 +1,45 @@
-let jsonSql = require('json-sql');
-const promise = require('bluebird');
-
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3000;
+
+
+let jsonSql = require('json-sql');
+const promise = require('bluebird');
+const SqlConnection = require("tedious").Connection;
+const Request = require("tedious").Request;
+
+executeQuery(query) {
+        let resultEntity = {
+            result: {},
+            error: null
+        };
+
+        return new promise((resolve, reject) => {
+            var connection = new SqlConnection(this.config);
+
+            connection.on('connect', function (err) {
+                let request = new Request(query, function (err, rowCount, rows) {
+                    if (err) {
+                        resultEntity.error = err;
+                        reject(resultEntity);
+                    } else {
+                        resultEntity.result = rows;
+                        resolve(resultEntity);
+                    }
+
+                    connection.close();
+                });
+                connection.execSql(request);
+            }
+           );
+        });
+    }
+
+
+
+
+
+
 
 
 module.exports = {
@@ -14,11 +50,6 @@ module.exports = {
 };
 
 
-createSelectQuery(filter, sort) {let sql = jsonSql.build({ dialect: 'mssql', type: 'select', table: 'Tabla1', 
-fields: ['num', 'num2'], 
-condition: filter, sort: sort
-}); 
-return sql;}
 
 
 app.get('/', (req, res) => {
