@@ -4,18 +4,12 @@ const app = express()
 const PORT = process.env.PORT || 3000;
 
 
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-  host: "files.000webhost.com",
-  user: "docker3",
-  password: "\Tq27Yu4A]tXy(@5"
-});
-
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-});
+module.exports = {
+  HOST: "files.000webhost.com",
+  USER: "docker3",
+  PASSWORD: "%R^mdLzvl!WRH@Wf%Hwf",
+  DB: "id18136124_docker3"
+};
 
 
 app.get('/', (req, res) => {
