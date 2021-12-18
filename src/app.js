@@ -3,7 +3,7 @@ const app = express()
 const PORT = process.env.PORT || 3000;
 
 
-/*
+
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
@@ -23,7 +23,7 @@ con.connect(function(err) {
 });
 
 
-*/
+
 
 
 app.get('/', (req, res) => {
