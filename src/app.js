@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "remotemysql.com",
+  host: "37.59.55.185",
   user: "QQIfU2UnGp",
   password: "0daqjLMrOS",
   database: "QQIfU2UnGp"
