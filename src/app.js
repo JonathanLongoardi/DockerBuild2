@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3000;
 
 
 
-var mysql = require('mysql');
+var mysql = require('mysql2');
 
 var con = mysql.createConnection({
   host: "remotemysql.com",
