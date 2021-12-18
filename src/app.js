@@ -19,16 +19,13 @@ con.connect(function(err) {
   con.query("select * from Tabla1", function (err, result, fields) {
     if (err) throw err;
     console.log(result);
+    app.get('/', (req, res) => {
+      res.send(result)
+    })
   });
 });
 
 
-
-
-
-app.get('/', (req, res) => {
-  res.send(result)
-})
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Example app listening at http://localhost:${PORT}`)
