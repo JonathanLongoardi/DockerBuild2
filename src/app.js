@@ -27,7 +27,7 @@ con.connect(function(err) {
 
 
 app.get('/', (req, res) => {
-  res.send('haciendo el sql...')
+  res.send(result)
 })
 
 app.listen(PORT, '0.0.0.0', () => {
