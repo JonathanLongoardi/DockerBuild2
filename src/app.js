@@ -3,9 +3,9 @@ const app = express()
 const PORT = process.env.PORT || 3000;
 
 
-
-var mysql = require('mysql');
 /*
+var mysql = require('mysql');
+
 var con = mysql.createConnection({
   host: "remotemysql.com",
   user: "QQIfU2UnGp",
