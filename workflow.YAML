@@ -1,0 +1,35 @@
+name: #nombre del workflow, pone cualquier nombre que te guste
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: #nombre del job, pone el que más te guste
+        uses: gonuit/heroku-docker-deploy@v1.3.3
+        with:
+        
+          email: #Aca va tu email, esto y todo lo que pongas lo puede ver cualquiera si tenés el repositorio en público
+          
+      
+          heroku_api_key: #Esto lo conseguis en Heroku, busca como conseguir la api key de una app de Heroku
+          
+    
+          heroku_app_name: #aca va el nombre de la app de Heroku
+
+         
+          dockerfile_directory: ./ #aca va dónde está guardado el dockerfile, si no te la querés complicar pone el dockerfile al principio del repositorio, osea que no esté en ningúna carpeta y desja esta parte cómo está
+
+         
+          dockerfile_name: Dockerfile
+
+    
+          docker_options: "--no-cache" #Opciones de docker, a no ser que sepas que tiene alguna opción, déjalo cómo está
+
+         
+          process_type: web
