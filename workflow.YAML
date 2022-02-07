@@ -1,4 +1,4 @@
-name: #nombre del workflow, pone cualquier nombre que te guste
+name: WorkFlow
 on:
   push:
     branches: [main]
