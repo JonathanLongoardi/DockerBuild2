@@ -10,26 +10,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: #nombre del job, pone el que más te guste
+      - name: Febrero
         uses: gonuit/heroku-docker-deploy@v1.3.3
         with:
         
-          email: #Aca va tu email, esto y todo lo que pongas lo puede ver cualquiera si tenés el repositorio en público
+          email: alumno21.longobardi.jonathan@ipm.edu.ar
           
       
-          heroku_api_key: #Esto lo conseguis en Heroku, busca como conseguir la api key de una app de Heroku
+          heroku_api_key: 4d0eb871-6ade-47e8-abfc-d6689d0cc0e1
           
     
-          heroku_app_name: #aca va el nombre de la app de Heroku
+          heroku_app_name: serene-ocean-63103
 
          
-          dockerfile_directory: ./ #aca va dónde está guardado el dockerfile, si no te la querés complicar pone el dockerfile al principio del repositorio, osea que no esté en ningúna carpeta y desja esta parte cómo está
+          dockerfile_directory: ./ 
 
          
           dockerfile_name: Dockerfile
 
     
-          docker_options: "--no-cache" #Opciones de docker, a no ser que sepas que tiene alguna opción, déjalo cómo está
+          docker_options: "--no-cache" 
 
          
           process_type: web
