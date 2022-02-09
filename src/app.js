@@ -4,6 +4,9 @@ const PORT = process.env.PORT || 3000;
 
 var mysql = require('mysql');
 
+
+app.get('/', (req, res) => {
+
 var con = mysql.createConnection({
   host: "remotemysql.com",
   user: "OpQPVaOdqY",
@@ -11,9 +14,6 @@ var con = mysql.createConnection({
   database: "OpQPVaOdqY"
 });
 
-
-
-app.get('/', (req, res) => {
 con.connect(function(err) {
   if (err) throw err;
   con.query("select * from Tabla1", function (err, result, fields) {
