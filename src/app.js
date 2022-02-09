@@ -1,3 +1,7 @@
+app.get('/', (req, res) => {
+
+
+
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 3000;
@@ -5,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 var mysql = require('mysql');
 
 
-app.get('/', (req, res) => {
+
 
 var con = mysql.createConnection({
   host: "remotemysql.com",
