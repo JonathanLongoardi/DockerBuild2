@@ -12,6 +12,7 @@ var con = mysql.createConnection({
 });
 
 
+
 app.get('/', (req, res) => {
 con.connect(function(err) {
   if (err) throw err;
@@ -24,6 +25,7 @@ con.connect(function(err) {
   });
 });
 })
+
 
 
 app.listen(PORT, '0.0.0.0', () => {
