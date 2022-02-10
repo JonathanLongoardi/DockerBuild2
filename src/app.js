@@ -19,7 +19,6 @@ app.get('/', (req, res) => {
     if (err) throw err;
     con.query("select * from Tabla1", function (err, result, fields) {
     if (err) throw err;
-    console.log(result);
       res.send(result)
     });
   });
