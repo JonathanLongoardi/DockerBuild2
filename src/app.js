@@ -13,17 +13,19 @@ var con = mysql.createConnection({
   database: "OpQPVaOdqY"
 });
   
-app.get('/', (req, res) => {
+
 
   con.connect(function(err) {
     if (err) throw err;
     con.query("select * from Tabla1", function (err, result, fields) {
     if (err) throw err;
-      res.send(result)
+      app.get('/', (req, res) => {
+        res.send(result)
+        })
     });
   });
   
-})
+
 
 
 app.listen(PORT, '0.0.0.0', () => {
