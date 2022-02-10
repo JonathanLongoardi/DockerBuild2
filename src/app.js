@@ -13,15 +13,6 @@ var con = mysql.createConnection({
   database: "OpQPVaOdqY"
 });
   
-app.get('/restart', (req, res) => {
-con.connect(function(err) {
-    if (err) throw err;
-    con.query("select * from Tabla1", function (err, result, fields) {
-    if (err) throw err;
-        res.send(result)
-    });
-  });
-})
 
 
   con.connect(function(err) {
@@ -30,7 +21,7 @@ con.connect(function(err) {
     if (err) throw err;
       app.get('/', (req, res) => {
         res.send(result)
-        })
+       })
     });
   });
   
